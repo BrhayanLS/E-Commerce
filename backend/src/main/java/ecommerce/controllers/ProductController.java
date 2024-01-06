@@ -76,4 +76,8 @@ public class ProductController {
         this.productService.create(product);
         return new ResponseEntity<>(new Message("Producto guardado"), HttpStatus.OK);
     }
+    @GetMapping("/best")
+    public ResponseEntity<List<Product>> getBestProduct(){
+        return new ResponseEntity<>(this.productService.getBestPriceProducts(), HttpStatus.OK);
+    }
 }

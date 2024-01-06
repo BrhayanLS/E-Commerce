@@ -46,10 +46,10 @@ public class ProductService {
     public Optional<Product> getProductById(Long id){
         return  this.productRepository.findById(id);
     }
-
+*/
     public List<Product> getBestPriceProducts(){
-        return this.productRepository.findFirst5ByOrderByPriceAsc();
-    }*/
+        return this.productRepository.findFirst4ByOrderByPriceAsc();
+    }
 
     public List<Product> getAll(){
         return this.productRepository.findAll();
